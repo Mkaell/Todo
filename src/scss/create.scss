@@ -1,0 +1,117 @@
+.create {
+    display: none;
+    margin-top: 30px;
+    padding: 30px 40px;
+    background: $backgroundForm;
+    border-radius: 20px;
+    width: 740px;
+    box-shadow: $shadow;
+
+    &__title {
+        font-size: 35px;
+        color: $mainTextColor;
+    }
+
+    &__form {
+        display: flex;
+        margin-top: 15px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        width: 100%;
+        margin-top: 15px;
+        font-size: 20px;
+        color: $mainTextColor;
+    }
+
+    &__label {
+        display: block;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 15px;
+        border-radius: 18px;
+        border: 2px solid transparent;
+        box-shadow: $shadow;
+        font-size: 20px;
+        color: $mainColor;
+        outline: none;
+
+        &:focus {
+            border: 2px solid $mainColor;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        padding: 15px;
+        border-radius: 18px;
+        border: 2px solid transparent;
+        box-shadow: $shadow;
+        font-size: 20px;
+        color: $mainColor;
+        resize: none;
+        outline: none;
+
+        &:focus {
+            border: 2px solid $mainColor;
+        }
+    }
+
+    &__select {
+        margin-top: 10px;
+        font-size: 16px;
+        width: 100%;
+        padding: 15px;
+        border-radius: 18px;
+        border: none;
+        box-shadow: $shadow;
+        outline: none;
+        color: $mainColor;
+        border: 2px solid transparent;
+
+
+        &:focus {
+            border: 2px solid $mainColor;
+        }
+    }
+
+    &__option {
+        font-size: 16px;
+        background: #fff;
+        color: $mainColor;
+        font-weight: 700;
+    }
+
+    &__btn {
+        margin-top: 30px;
+        padding: 15px;
+        font-size: 18px;
+        font-family: 'EB Garamond', serif;
+        width: 100%;
+        color: #fff;
+        background: $mainColor;
+        box-shadow: $shadow;
+        border-radius: 18px;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+
+        &:hover {
+            background: $colorHover;
+        }
+
+        &:active {
+            box-shadow: $shadowActive;
+        }
+
+        &:focus {
+            border: none;
+        }
+    }
+
+}

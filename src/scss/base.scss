@@ -16,3 +16,18 @@
     padding: 0 15px;
     margin: 0 auto;
 }
+
+.d-block {
+    display: block;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+body .active {
+    background: $colorHover;
+    color: $backgroundForm;
+}

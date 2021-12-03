@@ -1,0 +1,11 @@
+.working-field {
+    background: center / cover no-repeat url('../img/main/main__bg.png');
+    height: 100vh;
+    padding: 50px 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -8,7 +8,7 @@
     <title>Todo</title>
 </head>
 <body>
-    <section class="main">
+    <section class="main show">
         <div class="container">
             <div class="main__wrapper">
                 <h1 class="main__title">Welcome to Notes</h1>
@@ -19,5 +19,67 @@
             </div>
         </div>
     </section>
+
+    <section class="working-field hide">
+        <div class="container">
+            <div class="working-field__wrapper">
+                <div class="navigation">
+                    <ul class="navigation__tabs">
+                        <li class="navigation__tab " >
+                            <a href="#" class="navigation__link " data-tab="0">Posts</a>
+                        </li>
+                        <li class="navigation__tab" >
+                            <a href="#" class="navigation__link active" data-tab="1" >Create</a>
+                        </li>
+                        <li class="navigation__tab" >
+                            <a href="#" class="navigation__link heart" data-tab="2">Favorite</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="create working-field__item d-block" data-content="1">
+                    <h2 class="create__title">Create new post</h2>
+                    <form action="#" class="create__form">
+                        <div class="create__item">
+                            <input type="text" class="create__input" placeholder="Enter you Title">
+                        </div>
+                        <div class="create__item">
+                            <textarea name="" id="" cols="30" rows="5" class="create__textarea" 
+                            placeholder="Enter your Text"></textarea>
+                        </div>
+                        <div class="create__item">
+                            <label for="" class="create__label">Choose type of post</label>
+                            <select name="" id="" class="create__select">
+                                <option value="" class="create__option">Note</option>
+                                <option value="" class="create__option">News</option>
+                            </select>
+                        </div>
+                        <button class="create__btn">Create</button>
+                    </form>
+                </div>
+                <div class="post working-field__item" data-content="0">
+                    <div class="post__wrapper">
+                        <div class="post__item">
+                            <h2 class="post__title">Title name here</h2>
+                            <button class="post__btn">News</button>
+                        </div>
+                        <div class="post__item">
+                            <p class="post__text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, reiciendis.
+                            </p>
+                        </div>
+                        <div class="post__item">
+                            <p class="post__data">
+                                03.12.2021
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="favorite working-field__item" data-content="2">
+
+                </div>
+            </div>
+        </div> 
+    </section>
+    <script src="./js/script.js"></script>
 </body>
 </html>

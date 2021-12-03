@@ -1,0 +1,49 @@
+.navigation {
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        width: 740px;
+        box-shadow: $shadow;
+    }
+
+    &__tab {
+        margin-right: 10px;
+
+        :last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        position: relative;
+        padding: 20px 90px;
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        background: $backgroundForm;
+        color: $colorHover;
+        border-radius: 18px;
+        transition: 0.15s ease;
+
+        &:hover {
+            margin-top: -8px;
+            // background: $colorHover;
+            // color: $backgroundForm;
+        }
+
+        &:active {
+            box-shadow: $shadowActive;
+        }
+
+    }
+}
+
+.heart {
+    &::after {
+        content: '♡';
+        position: absolute;
+        top: 10px;
+        left: 164px;
+    }
+}

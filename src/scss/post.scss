@@ -1,0 +1,64 @@
+.post {
+    display: none;
+    margin-top: 30px;
+    padding: 40px 40px;
+    background: $backgroundForm;
+    border-radius: 20px;
+    width: 740px;
+    box-shadow: $shadow;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: $shadow;
+    }
+
+    &__item {
+        display: flex;
+        padding: 30px 30px;
+        justify-content: space-between;
+        box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+
+        &:last-child {
+            box-shadow: none;
+        }
+    }
+
+    &__title {
+        font-size: 35px;
+        color: $mainTextColor;
+    }
+
+    &__btn {
+        padding: 15px;
+        font-size: 18px;
+        font-family: 'EB Garamond', serif;
+        width: 100px;
+        color: #fff;
+        background: $mainColor;
+        box-shadow: $shadow;
+        border-radius: 18px;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+
+        &:hover {
+            background: $colorHover;
+        }
+
+        &:active {
+            box-shadow: $shadowActive;
+        }
+
+        &:focus {
+            border: none;
+        }
+    }
+
+    &__data {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
