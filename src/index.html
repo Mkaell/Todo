@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./scss/style.scss">
     <title>Todo</title>
 </head>
 <body>
-    <section class="main show">
+    <section class="main show" id="header">
         <div class="container">
             <div class="main__wrapper">
                 <h1 class="main__title">Welcome to Notes</h1>
                 <p class="main__text">
                     Create your own notes, add them to your favotites and don't miss anything.
                 </p>
-                <button class="main__btn">get started</button>
+                <button class="main__btn js-header-start">get started</button>
             </div>
         </div>
     </section>
 
-    <section class="working-field hide">
+    <section class="working-field hide" id="field">
         <div class="container">
             <div class="working-field__wrapper">
                 <div class="navigation">
-                    <ul class="navigation__tabs">
+                    <ul class="navigation__tabs" id="navigation">
                         <li class="navigation__tab " >
                             <a href="#" class="navigation__link " data-tab="0">Posts</a>
                         </li>
@@ -36,7 +35,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="create working-field__item d-block" data-content="1">
+                <div class="create working-field__item d-block" data-content="1" id="create">
                     <h2 class="create__title">Create new post</h2>
                     <form action="#" class="create__form">
                         <div class="create__item">
@@ -56,7 +55,7 @@
                         <button class="create__btn">Create</button>
                     </form>
                 </div>
-                <div class="post working-field__item" data-content="0">
+                <div class="post working-field__item" data-content="0" id="post">
                     <div class="post__wrapper">
                         <div class="post__item">
                             <h2 class="post__title">Title name here</h2>
@@ -80,6 +79,6 @@
             </div>
         </div> 
     </section>
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
 </body>
 </html>
