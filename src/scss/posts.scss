@@ -1,10 +1,10 @@
 .posts {
-    display: none;
+    // display: none;
     margin-top: 30px;
     padding: 40px 40px;
     background: $backgroundForm;
     border-radius: 20px;
-    width: 740px;
+    width: 650px;
     box-shadow: $shadow;
 
     &__wrapper {
@@ -19,6 +19,7 @@
         display: flex;
         padding: 30px 30px;
         justify-content: space-between;
+        align-items: center;
         box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
 
         &:last-child {
@@ -27,20 +28,20 @@
     }
 
     &__title {
-        font-size: 35px;
+        font-size: 28px;
         color: $mainTextColor;
     }
 
-    &__btn {
+    &__label {
         padding: 15px;
-        font-size: 18px;
-        font-family: 'EB Garamond', serif;
+        font-size: 16px;
         width: 100px;
         color: #fff;
         background: $mainColor;
         box-shadow: $shadow;
         border-radius: 18px;
         text-transform: uppercase;
+        text-align: center;
         border: none;
         outline: none;
 

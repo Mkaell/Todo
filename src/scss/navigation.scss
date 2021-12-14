@@ -1,28 +1,25 @@
 .navigation {
     &__tabs {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         border-radius: 20px;
-        width: 740px;
-        box-shadow: $shadow;
+        width: 650px;
     }
 
     &__tab {
-        margin-right: 10px;
-
-        :last-child {
-            margin-right: 0;
-        }
+        width: 210px;
     }
 
     &__link {
         position: relative;
-        padding: 20px 90px;
+        padding: 15px 0;
+        width: 100%;
         display: block;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
         background: $backgroundForm;
         color: $colorHover;
+        text-align: center;
         border-radius: 18px;
         transition: 0.15s ease;
 
@@ -43,7 +40,7 @@
     &::after {
         content: '♡';
         position: absolute;
-        top: 10px;
-        left: 164px;
+        top: 8px;
+        left: 136px;
     }
 }

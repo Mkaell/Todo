@@ -25,17 +25,17 @@
                 <div class="navigation">
                     <ul class="navigation__tabs" id="navigation">
                         <li class="navigation__tab " >
-                            <a href="#" class="navigation__link " data-tab="0">Posts</a>
+                            <a href="#" class="navigation__link " data-name="posts">Posts</a>
                         </li>
                         <li class="navigation__tab" >
-                            <a href="#" class="navigation__link active" data-tab="1" >Create</a>
+                            <a href="#" class="navigation__link active" data-name="create" >Create</a>
                         </li>
                         <li class="navigation__tab" >
-                            <a href="#" class="navigation__link heart" data-tab="2">Favorite</a>
+                            <a href="#" class="navigation__link heart" data-name="favorite">Favorite</a>
                         </li>
                     </ul>
                 </div>
-                <div class="create working-field__item show" data-content="1" id="create">
+                <div class="create working-field__item" id="create">
                     <h2 class="create__title">Create new post</h2>
                     <form action="#" class="create__form">
                         <div class="create__item">
@@ -55,11 +55,11 @@
                         <button class="create__btn">Create</button>
                     </form>
                 </div>
-                <div class="posts working-field__item" data-content="0" id="posts">
+                <div class="posts working-field__item hide" id="posts">
                     <div class="posts__wrapper">
                         <div class="posts__item">
                             <h2 class="posts__title">Title name here</h2>
-                            <button class="posts__btn">News</button>
+                            <div class="posts__label">News</div>
                         </div>
                         <div class="posts__item">
                             <p class="posts__text">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="favorite working-field__item" data-content="2" id="favorite">
+                <div class="favorite working-field__item hide" id="favorite">
 
                 </div>
             </div>

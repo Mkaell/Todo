@@ -1,27 +1,23 @@
 import { Component } from "../core/component";
+// import { PostsComponent } from "../components/posts.components";
+// import { CreateComponent } from "../components/create.components";
+// import { FavoriteComponent } from "../components/favorite.components";
 
-import { PostsComponent } from "../components/posts.components";
-import { CreateComponent } from "../components/create.components";
-import { FavoriteComponent } from "../components/favorite.components";
-
-const postsComponent = new PostsComponent('#posts');
-const createComponent = new CreateComponent('#create');
-const favoriteComponent = new FavoriteComponent('#favorite');
+// const postsComponent = new PostsComponent('#posts');
+// const createComponent = new CreateComponent('#create');
+// const favoriteComponent = new FavoriteComponent('#favorite');
 
 
 
 export class NavigationComponent extends Component{
     constructor(id) {
         super(id);
-        this.tabs = []; 
-        this.content();   
+        this.tabs = [];    
     }
-    content(){
-        this.tabs.push(postsComponent.$el);
-        this.tabs.push(createComponent.$el);
-        this.tabs.push(favoriteComponent.$el);
-        console.log(this.tabs);
+    registerTabs(tabs){
+        this.tabs = tabs;
     }
+
     init(){
         this.$el.addEventListener('click', tabClickHandler.bind(this));
     }  
@@ -31,20 +27,25 @@ function tabClickHandler(event){
     event.preventDefault();
     const TABS = Array.from(this.$el.querySelectorAll('.navigation__link'));
     const target = event.target;
-    let currTab = target.dataset.tab;
+    let currTab = target.dataset.name;
     
+    //Добавление класса активности к текущему табу.
     TABS.forEach(elem => { 
         elem.classList.remove('active');
     });
     target.classList.add('active');
     
+    //Получаем id текущего компонента через data-name активного таба.
+    const activeTab = this.tabs.find((tab) =>{
+        return tab.name === currTab;
+    });
 
-    for (let i = 0; i < this.tabs.length; i++) {
-        const item = this.tabs[i];
-        item.classList.remove("show");
-        if (item.dataset.content === currTab) {
-          item.classList.add("show");
-        }   
-    }
+    // Скрываем все компоненты
+    this.tabs.forEach((tab)=>{
+        return tab.component.hide();
+    });
+
+    // Показываем текущей компонент.
+    activeTab.component.show();
 }
 
