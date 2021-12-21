@@ -2,7 +2,6 @@
     &__tabs {
         display: flex;
         justify-content: space-between;
-        border-radius: 20px;
         width: 650px;
     }
 
@@ -22,6 +21,11 @@
         text-align: center;
         border-radius: 18px;
         transition: 0.15s ease;
+
+        &.active {
+            background: $colorHover;
+            color: $backgroundForm;
+        }
 
         &:hover {
             margin-top: -8px;

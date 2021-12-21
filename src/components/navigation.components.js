@@ -1,14 +1,4 @@
 import { Component } from "../core/component";
-// import { PostsComponent } from "../components/posts.components";
-// import { CreateComponent } from "../components/create.components";
-// import { FavoriteComponent } from "../components/favorite.components";
-
-// const postsComponent = new PostsComponent('#posts');
-// const createComponent = new CreateComponent('#create');
-// const favoriteComponent = new FavoriteComponent('#favorite');
-
-
-
 export class NavigationComponent extends Component{
     constructor(id) {
         super(id);
@@ -30,10 +20,11 @@ function tabClickHandler(event){
     let currTab = target.dataset.name;
     
     //Добавление класса активности к текущему табу.
-    TABS.forEach(elem => { 
+    TABS.forEach(elem => {
         elem.classList.remove('active');
     });
     target.classList.add('active');
+
     
     //Получаем id текущего компонента через data-name активного таба.
     const activeTab = this.tabs.find((tab) =>{

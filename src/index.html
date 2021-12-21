@@ -35,26 +35,27 @@
                         </li>
                     </ul>
                 </div>
-                <div class="create working-field__item" id="create">
+                    
+                <form action="#" class="create create__form" id="create">
                     <h2 class="create__title">Create new post</h2>
-                    <form action="#" class="create__form">
-                        <div class="create__item">
-                            <input type="text" class="create__input" placeholder="Enter you Title">
-                        </div>
-                        <div class="create__item">
-                            <textarea name="" id="" cols="30" rows="5" class="create__textarea" 
-                            placeholder="Enter your Text"></textarea>
-                        </div>
-                        <div class="create__item">
-                            <label for="" class="create__label">Choose type of post</label>
-                            <select name="" id="" class="create__select">
-                                <option value="" class="create__option">Note</option>
-                                <option value="" class="create__option">News</option>
-                            </select>
-                        </div>
-                        <button class="create__btn">Create</button>
-                    </form>
-                </div>
+
+                    <div class="create__item">
+                        <input type="text" class="create__input" name="title" placeholder="Enter you Title">
+                    </div>
+                    <div class="create__item">
+                        <textarea name="fulltext" class="create__textarea" 
+                        placeholder="Enter your Text"></textarea>
+                    </div>
+                    <div class="create__item">
+                        <label for="#" class="create__label">Choose type of post</label>
+                        <select name="type"  class="create__select">
+                            <option value="note" class="create__option" selected>Note</option>
+                            <option value="news" class="create__option">News</option>
+                        </select>
+                    </div>
+                    <button class="create__btn" type="submit">Create</button>
+                </form>
+
                 <div class="posts working-field__item hide" id="posts">
                     <div class="posts__wrapper">
                         <div class="posts__item">
