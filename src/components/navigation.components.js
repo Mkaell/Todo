@@ -25,7 +25,6 @@ function tabClickHandler(event){
     });
     target.classList.add('active');
 
-    
     //Получаем id текущего компонента через data-name активного таба.
     const activeTab = this.tabs.find((tab) =>{
         return tab.name === currTab;

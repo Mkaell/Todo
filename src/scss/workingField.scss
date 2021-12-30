@@ -1,11 +1,10 @@
 .working-field {
-    background: center / cover no-repeat url('../img/main/main__bg.png');
-    height: 100vh;
-    padding: 100px 0;
+    padding: 5% 0;
 
     &__wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 -15px;
     }
 }

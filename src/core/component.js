@@ -3,15 +3,19 @@ export class Component {
         this.$el = document.querySelector(id);
         this.init();
     }
-    init(){
+    init(){}
 
-    }
+    onHide(){}
+
+    onShow(){}
 
     hide(){
         this.$el.classList.add('hide');
+        this.onHide();
     }
     
     show(){
         this.$el.classList.remove('hide');
+        this.onShow();
     }
 }

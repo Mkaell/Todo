@@ -7,6 +7,14 @@
     text-decoration: none;
 }
 
+body {
+    background-image: url('../img/main/main__bg.png');
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .overflow {
     overflow: hidden;
 }

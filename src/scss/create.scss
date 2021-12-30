@@ -98,24 +98,7 @@
         font-size: 18px;
         width: 100%;
         color: #fff;
-        background: $mainColor;
-        box-shadow: $shadow;
-        border-radius: 18px;
         text-transform: uppercase;
-        border: none;
-        outline: none;
-
-        &:hover {
-            background: $colorHover;
-        }
-
-        &:active {
-            box-shadow: $shadowActive;
-        }
-
-        &:focus {
-            border: none;
-        }
     }
 
 }
