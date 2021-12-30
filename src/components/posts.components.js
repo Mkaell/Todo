@@ -1,4 +1,5 @@
 import { Component } from "../core/component";
+import { renderPost } from "../templates/post.template";
 import { apiService } from "../services/app.service";
 import { TransformService } from "../services/transform.service";
 
@@ -14,8 +15,7 @@ export class PostsComponent extends Component{
     async onShow(){
         const fireBaseData = await apiService.fetchPost();
         const posts = TransformService.convertObjectToArray(fireBaseData);
-        console.log(posts);
-        const html = posts.map((post) => renderPost(post));
+        const html = posts.map((post) => renderPost(post, {withButton: true}));
 
         this.$el.insertAdjacentHTML('afterbegin', html.join(' '));
     }
@@ -25,52 +25,20 @@ export class PostsComponent extends Component{
     }
 }
 
-function renderPost(post){
-    const tag = 
-        post.type === 'news' ?
-          `News`:
-          `Note`;
-
-    const button = (JSON.parse(localStorage.getItem('favorites')) || []).includes(post.id) ?
-          `<button class='posts__btn btn'data-id='${post.id}' >&#x1F5D1;</button>`:
-          `<button class='posts__btn btn' data-id='${post.id}'>&#10084;</button>`;
-    
-    return `
-    <div class="posts__wrapper">
-        <div class="posts__item">
-            <h2 class="posts__title">${post.title}</h2>
-            <div class="posts__label">${tag}</div>
-        </div>
-        <div class="posts__item">
-            <p class="posts__text">
-                ${post.fulltext}
-            </p>
-        </div>
-        <div class="posts__item">
-            <p class="posts__data">
-                ${post.date}
-            </p>
-            ${button}
-        </div>
-    </div>
-    `;
-}
-
 function buttonHandler(event){
-    const $el = event.target;
+    const $el = event.target.closest('button');
     const id = $el.dataset.id;
 
     if(id){
-        console.log(id);
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-        console.log(favorites);
+        
 
         if(favorites.includes(id)){
             //Удалить элемент
-            $el.innerHTML = `&#10084;`;
+            $el.innerHTML = `<i class="fas fa-heart"></i>`;
             favorites = favorites.filter((fID) => fID != id);
         } else {
-            $el.innerHTML = `&#x1F5D1;`;
+            $el.innerHTML = `<i class="fas fa-heart-broken"></i>`;
             favorites.push(id);
         }
 

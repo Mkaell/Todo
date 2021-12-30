@@ -5,7 +5,7 @@ class ApiService {
 
     async createPost(post){
         try{
-            const request = new Request(this.url + '/posts.json', {
+            const request = new Request(`${this.url}/posts.json`, {
                 method: 'POST',
                 body: JSON.stringify(post),
             });
@@ -18,6 +18,17 @@ class ApiService {
     async fetchPost(){
         try{
             const request = new Request(`${this.url}/posts.json`, {
+                method: 'GET',
+            });
+            return useRequest(request);
+        } catch (error){
+            console.log(error);
+        }
+    }
+
+    async fetchPostById(id){
+        try{
+            const request = new Request(`${this.url}/posts/${id}.json`, {
                 method: 'GET',
             });
             return useRequest(request);
