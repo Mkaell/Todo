@@ -6,6 +6,8 @@ import { CreateComponent } from "../components/create.components";
 import { FavoritesComponent } from "../components/favorite.components";
 
 
+
+
 new HeaderComponent('#header');
 const navigationComponent = new NavigationComponent('#navigation');
 const postsComponent = new PostsComponent('#posts');
@@ -19,4 +21,5 @@ navigationComponent.registerTabs([
     {name: 'posts', component: postsComponent},
     {name: 'favorites', component: favoritesComponent},
 ]);
+
 

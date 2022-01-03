@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 100%;
+    width: 85%;
 
     &__wrapper {
         display: flex;
@@ -13,15 +13,13 @@
         background: #fff;
         border-radius: 18px;
         box-shadow: $shadow;
-
-        &:nth-child(3n+3) {
-            margin-right: 0;
-        }
     }
 
     &__item {
         display: flex;
+        position: relative;
         justify-content: space-between;
+        word-break: break-all;
         padding: 20px 20px;
         align-items: center;
         box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
@@ -37,6 +35,7 @@
 
     &__title {
         max-width: 220px;
+        word-break: break-all;
         font-size: 22px;
         text-align: left;
         color: $mainTextColor;
@@ -64,5 +63,23 @@
         font-size: 24px;
         padding: 10px 10px;
         border-radius: 50%;
+    }
+
+    &__delete {
+        position: absolute;
+        width: 35px;
+        top: -18px;
+        right: -22px;
+        padding: 8px;
+        background: rgba(34, 60, 80, 0.6);
+        border-radius: 50%;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:hover {
+            background: $mainTextColor;
+        }
     }
 }
