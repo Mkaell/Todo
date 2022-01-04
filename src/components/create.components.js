@@ -1,7 +1,7 @@
 import { Component } from "../core/component";
 import { Form } from "../core/form";
 import { Validators } from "../core/validators";
-import { apiService } from "../services/app.service"; 
+import { apiService } from "../services/app.service";
 
 export class CreateComponent extends Component{
     constructor(id) {
@@ -31,8 +31,27 @@ async function submitHandler(event){
     
         await apiService.createPost(formData);
         this.form.clear();
-        alert('Post created');
-        console.log('submit', formData);
+
+        let modal = document.querySelector("#modal");
+        let span = document.querySelector(".close");
+        openAndCloseModal(span, window, modal);
     }
     
+}
+
+function openAndCloseModal(span, window, modal) {
+    // When the user clicks on the button, open the modal
+    modal.style.display = "block";
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+    };
 }

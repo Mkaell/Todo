@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-    padding: 30px 40px;
+    padding: 20px 20px;
     background: $backgroundForm;
     border-radius: 20px;
     width: 650px;
@@ -28,17 +28,16 @@
     }
 
     &__link {
-        margin-top: 20px;
+        padding: 10px 0;
+        width: 100%;
         font-size: 20px;
         font-weight: 700;
         color: $mainTextColor;
-
-        &:first-child {
-            margin-top: 0;
-        }
+        transition: 0.1s ease;
 
         &:hover {
             color: $mainColor;
+            transform: scale(1.1);
         }
     }
 }

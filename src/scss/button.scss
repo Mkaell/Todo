@@ -1,22 +1,21 @@
 .btn {
-    background: $mainColor;
+    background-image: linear-gradient(to right, #6441A5 0%, #2a0845 51%, #6441A5 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
     border-radius: 18px;
-    box-shadow: $shadow;
     border: none;
-    color: #fff;
-    outline: none;
-    transition: 0.3s ease;
+    padding: 15px 45px;
+    text-align: center;
+    transition: 0.5s;
+    color: white;
     cursor: pointer;
-
-    &:hover {
-        background: $colorHover;
-    }
 
     &:active {
         box-shadow: $shadowActive;
     }
 
-    &:focus {
-        border: none;
+    &:hover {
+        background-position: right center;
+        text-decoration: none;
     }
 }

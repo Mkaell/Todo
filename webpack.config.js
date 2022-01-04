@@ -21,7 +21,7 @@ const optimization = () => {
         config.minimizer = [
             new OptimizeCssAssetsWebpackPlugin(),
             new TerserWebpackPlugin()
-        ]
+        ];
     }
 
     return config;
@@ -87,12 +87,12 @@ const plugins = () => {
             }
         }),
         new CleanWebpackPlugin(),
-        // new CopyWebpackPlugin([
-        //     {
-        //         from: path.resolve(__dirname, 'src/favicon.ico'),
-        //         to: path.resolve(__dirname, 'dist')
-        //     }
-        // ]),
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, 'src/img/favicon/favicon.ico'),
+                to: path.resolve(__dirname, 'dist')
+            }
+        ]),
         new MiniCssExtractPlugin({
             filename: filename('css')
         })

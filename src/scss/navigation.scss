@@ -20,7 +20,7 @@
         color: $colorHover;
         text-align: center;
         border-radius: 18px;
-        transition: 0.15s ease;
+        transition: 0.2s ease;
 
         &.active {
             background: $colorHover;
@@ -28,9 +28,7 @@
         }
 
         &:hover {
-            margin-top: -8px;
-            // background: $colorHover;
-            // color: $backgroundForm;
+            transform: scale(1.05);
         }
 
         &:active {

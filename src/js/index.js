@@ -1,4 +1,5 @@
 import '../scss/style.scss';
+
 import { HeaderComponent } from "../components/header.components.js";
 import { NavigationComponent } from "../components/navigation.components";
 import { PostsComponent } from "../components/posts.components";
