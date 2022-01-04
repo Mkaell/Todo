@@ -1,6 +1,6 @@
 import '../scss/style.scss';
 
-import { HeaderComponent } from "../components/header.components.js";
+import { MainComponent } from "../components/main.components.js";
 import { NavigationComponent } from "../components/navigation.components";
 import { PostsComponent } from "../components/posts.components";
 import { CreateComponent } from "../components/create.components";
@@ -9,7 +9,7 @@ import { FavoritesComponent } from "../components/favorite.components";
 
 
 
-new HeaderComponent('#header');
+new MainComponent('#main');
 const navigationComponent = new NavigationComponent('#navigation');
 const postsComponent = new PostsComponent('#posts');
 const createComponent = new CreateComponent('#create');

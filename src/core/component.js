@@ -1,4 +1,4 @@
-export class Component {
+class Component {
     constructor(id){
         this.$el = document.querySelector(id);
         this.init();
@@ -19,3 +19,5 @@ export class Component {
         this.onShow();
     }
 }
+
+export {Component};

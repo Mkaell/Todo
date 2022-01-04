@@ -1,4 +1,4 @@
-export class Form {
+class Form {
     constructor(form, items){
         this.form = form;
         this.items = items;
@@ -63,3 +63,5 @@ function clearError(item){
         item.closest('.create__item').removeChild(item.nextSibling);
     }
 }
+
+export {Form};

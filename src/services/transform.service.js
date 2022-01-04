@@ -1,4 +1,4 @@
-export class TransformService {
+class TransformService {
     static convertObjectToArray(fireBaseData){
         return Object.keys(fireBaseData).map((key) => {
             const item = fireBaseData[key];
@@ -8,3 +8,5 @@ export class TransformService {
         });
     }
 }
+
+export {TransformService};

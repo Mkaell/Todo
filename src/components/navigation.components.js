@@ -1,5 +1,5 @@
 import { Component } from "../core/component";
-export class NavigationComponent extends Component{
+class NavigationComponent extends Component{
     constructor(id) {
         super(id);
         this.tabs = [];    
@@ -19,23 +19,24 @@ function tabClickHandler(event){
     const target = event.target;
     let currTab = target.dataset.name;
     
-    //Добавление класса активности к текущему табу.
+    //Adding an activity class to the current tab
     TABS.forEach(elem => {
         elem.classList.remove('active');
     });
     target.classList.add('active');
 
-    //Получаем id текущего компонента через data-name активного таба.
     const activeTab = this.tabs.find((tab) =>{
         return tab.name === currTab;
     });
 
-    // Скрываем все компоненты
+    // Hiding all components
     this.tabs.forEach((tab)=>{
         return tab.component.hide();
     });
 
-    // Показываем текущей компонент.
+    // Showing the current component.
     activeTab.component.show();
 }
+
+export {NavigationComponent};
 

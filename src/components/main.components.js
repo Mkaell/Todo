@@ -1,6 +1,7 @@
 import { Component } from "../core/component";
+import { apiService } from "../services/app.service";
 
-export class HeaderComponent extends Component{
+class MainComponent extends Component{
     constructor(id) {
         super(id);    
     }
@@ -9,7 +10,7 @@ export class HeaderComponent extends Component{
             this.hide();
             secondScreen.classList.remove('hide');
         }
-        const BTN = this.$el.querySelector('.js-header-start');
+        const BTN = this.$el.querySelector('.js-main-start');
         BTN.addEventListener('click', buttonHandler.bind(this));     
     }
 }
@@ -17,8 +18,12 @@ export class HeaderComponent extends Component{
 
 const secondScreen = document.querySelector('.working-field');
 
-function buttonHandler(){
+async function buttonHandler(){
     localStorage.setItem('visited' , true);
     this.hide();
     secondScreen.classList.remove('hide');
+    
+    await apiService.deleteAllPosts();
 }
+
+export {MainComponent};

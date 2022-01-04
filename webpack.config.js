@@ -84,15 +84,10 @@ const plugins = () => {
             template: './index.html',
             minify: {
                 collapseWhitespace: isProduction
-            }
+            },
+            favicon: "./img/favicon/favicon.ico"
         }),
         new CleanWebpackPlugin(),
-        new CopyWebpackPlugin([
-            {
-                from: path.resolve(__dirname, 'src/img/favicon/favicon.ico'),
-                to: path.resolve(__dirname, 'dist')
-            }
-        ]),
         new MiniCssExtractPlugin({
             filename: filename('css')
         })

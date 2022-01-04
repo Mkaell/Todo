@@ -3,7 +3,7 @@ import { apiService } from "../services/app.service";
 import { TransformService } from "../services/transform.service";
 import { renderPost } from "../templates/post.template";
 
-export class FavoritesComponent extends Component{
+class FavoritesComponent extends Component{
     constructor(id) {
         super(id);    
     }
@@ -78,4 +78,6 @@ function isEmpty(obj) {
     }
     return true;
 }
+
+export {FavoritesComponent};
 
