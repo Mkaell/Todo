@@ -9,12 +9,12 @@
     border-radius: 20px;
     width: 650px;
     text-align: center;
-    box-shadow: $shadow;
 
     &__empty {
+        margin-top: 40px;
         font-size: 20px;
         font-weight: 700;
-        color: $mainTextColor;
+        color: #fff;
     }
 
     & li {
@@ -28,16 +28,35 @@
     }
 
     &__link {
+        position: relative;
         padding: 10px 0;
-        width: 100%;
+        word-break: break-all;
+        margin-top: 5px;
         font-size: 20px;
         font-weight: 700;
         color: $mainTextColor;
-        transition: 0.1s ease;
+        transition: 0.5s ease;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            background: #000;
+            transition: 0.5s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
 
         &:hover {
             color: $mainColor;
-            transform: scale(1.1);
         }
+
     }
 }

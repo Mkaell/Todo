@@ -1,0 +1,148 @@
+@media (max-width: 900px) {
+    .container {
+        max-width: 767px;
+    }
+
+    .working-field {
+        padding: 50px 0;
+
+        &__wrapper {
+            margin: 0;
+        }
+    }
+
+    .posts {
+        max-width: 730px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__wrapper {
+            width: 460px;
+            margin-top: 45px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 575px;
+    }
+
+    .navigation {
+        width: 100%;
+
+        &__tabs {
+            width: 100%;
+        }
+
+        &__tab {
+            width: 32%;
+        }
+    }
+
+    .working-field {
+
+        &__wrapper {
+            margin: 0;
+        }
+    }
+
+    .create {
+        width: 100%;
+    }
+
+    .posts {
+        width: 100%;
+
+        &__wrapper {
+            width: 460px;
+            margin-top: 45px;
+        }
+    }
+
+    .favorites {
+        max-width: 545px;
+    }
+
+    .heart::after {
+        left: 116px;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .navigation {
+        &__tabs {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__tab {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        &__link {
+            font-size: 15px;
+        }
+    }
+
+    .working-field {
+        padding: 20px 0;
+
+        &__item {
+            &:last-child {
+                width: 100%;
+            }
+        }
+    }
+
+    .create {
+        padding: 10px;
+
+        &__item {
+            &:nth-child(2) {
+                margin-top: 15px;
+            }
+        }
+
+        &__title {
+            font-size: 19px;
+        }
+
+        &__input {
+            font-size: 14px;
+        }
+
+        &__textarea {
+            font-size: 14px;
+        }
+
+        &__select {
+            font-size: 14px;
+        }
+
+        &__btn {
+            font-size: 15px;
+        }
+    }
+
+    .posts {
+        &__wrapper {
+            width: 100%;
+            margin-top: 35px;
+        }
+    }
+
+    .favorites {
+        width: 100%;
+    }
+
+    .heart::after {
+        left: 61%;
+    }
+}

@@ -54,7 +54,7 @@ function renderList(list = {}){
 
     } else {
         return `
-        <li class='favorites'>
+        <li>
             <p class="favorites__empty">There's nothing here yet</p>
         </li>`;
     }
