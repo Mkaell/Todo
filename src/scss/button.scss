@@ -4,11 +4,11 @@
     box-shadow: 0 0 20px #eee;
     border-radius: 18px;
     border: none;
+    color: white;
+    cursor: pointer;
     padding: 15px 45px;
     text-align: center;
     transition: 0.5s;
-    color: white;
-    cursor: pointer;
 
     &:active {
         box-shadow: $shadowActive;

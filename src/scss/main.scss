@@ -1,39 +1,37 @@
 .main {
-    background: center / cover no-repeat url('../img/main/main__bg.png');
-    height: 100vh;
     padding: 5% 0;
 
     &__wrapper {
-        display: flex;
-        padding: 50px 40px;
-        flex-direction: column;
         align-items: center;
         background: $backgroundForm;
         border-radius: 20px;
-        width: 740px;
-        margin: 40px auto;
         box-shadow: $shadow;
+        display: flex;
+        flex-direction: column;
+        max-width: 650px;
+        margin: 40px auto;
+        padding: 50px 40px;
     }
 
     &__title {
-        font-size: 37px;
         color: $mainTextColor;
+        font-size: 37px;
     }
 
     &__text {
-        width: 90%;
-        margin-top: 100px;
-        line-height: 26px;
-        font-size: 22px;
-        text-align: center;
         color: $mainTextColor;
+        font-size: 22px;
+        line-height: 26px;
+        margin-top: 100px;
+        text-align: center;
+        width: 90%;
     }
 
     &__btn {
         font-size: 20px;
         margin-top: 100px;
         padding: 15px;
-        width: 50%;
         text-transform: uppercase;
+        width: 50%;
     }
 }

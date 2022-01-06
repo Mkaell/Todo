@@ -1,20 +1,21 @@
 .favorites {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    padding: 20px 20px;
     background: $backgroundForm;
     border-radius: 20px;
-    width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 20px 20px;
     text-align: center;
+    width: 650px;
+
 
     &__empty {
-        margin-top: 40px;
+        color: #fff;
         font-size: 20px;
         font-weight: 700;
-        color: #fff;
+        margin-top: 40px;
     }
 
     & li {
@@ -23,31 +24,31 @@
     }
 
     & .posts__wrapper {
-        width: 100%;
         margin: 0;
+        width: 100%;
     }
 
     &__link {
-        position: relative;
-        padding: 10px 0;
-        word-break: break-all;
-        margin-top: 5px;
+        color: $mainTextColor;
         font-size: 20px;
         font-weight: 700;
-        color: $mainTextColor;
+        margin-top: 5px;
+        position: relative;
+        padding: 10px 0;
         transition: 0.5s ease;
+        word-break: break-all;
 
         &::after {
             content: '';
-            display: block;
-            position: absolute;
-            height: 1px;
             bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40%;
             background: #000;
+            display: block;
+            height: 1px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
             transition: 0.5s ease;
+            width: 40%;
         }
 
         &:hover::after {

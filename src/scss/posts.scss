@@ -5,24 +5,24 @@
     width: 820px;
 
     &__wrapper {
-        display: flex;
-        margin-top: 30px;
-        width: 370px;
-        justify-content: space-between;
-        flex-direction: column;
         background: #fff;
         border-radius: 18px;
         box-shadow: $shadow;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 30px;
+        width: 370px;
     }
 
     &__item {
-        display: flex;
-        position: relative;
-        justify-content: space-between;
-        word-break: break-all;
-        padding: 20px 20px;
         align-items: center;
         box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 20px 20px;
+        word-break: break-all;
 
         &:nth-child(1) {
             box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
@@ -34,23 +34,23 @@
     }
 
     &__title {
-        max-width: 220px;
-        word-break: break-all;
-        font-size: 22px;
-        text-align: left;
         color: $mainTextColor;
+        font-size: 22px;
+        max-width: 220px;
+        text-align: left;
+        word-break: break-all;
     }
 
     &__label {
-        padding: 9px;
-        font-size: 11px;
-        width: 62px;
-        color: #fff;
         background: $mainTextColor;
         box-shadow: $shadow;
         border-radius: 10px;
+        color: #fff;
+        font-size: 11px;
+        padding: 9px;
         text-transform: uppercase;
         text-align: center;
+        width: 62px;
     }
 
     &__data {
@@ -59,24 +59,25 @@
     }
 
     &__btn {
-        min-width: 50px;
-        font-size: 24px;
-        padding: 10px 10px;
         border-radius: 50%;
+        font-size: 24px;
+        min-width: 50px;
+        padding: 10px 10px;
+
     }
 
     &__delete {
-        position: absolute;
-        width: 35px;
-        top: -18px;
-        right: -22px;
-        padding: 8px;
         background: rgba(34, 60, 80, 0.6);
         border-radius: 50%;
-        color: #fff;
         border: none;
+        color: #fff;
         cursor: pointer;
+        position: absolute;
+        padding: 8px;
+        right: -22px;
+        top: -18px;
         transition: 0.2s ease;
+        width: 35px;
 
         &:hover {
             background: $mainTextColor;

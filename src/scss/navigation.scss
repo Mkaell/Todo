@@ -10,17 +10,17 @@
     }
 
     &__link {
-        position: relative;
-        padding: 15px 0;
-        width: 100%;
+        background: $backgroundForm;
+        border-radius: 18px;
+        color: $colorHover;
         display: block;
         font-size: 16px;
         font-weight: 700;
-        background: $backgroundForm;
-        color: $colorHover;
+        position: relative;
+        padding: 15px 0;
         text-align: center;
-        border-radius: 18px;
         transition: 0.2s ease;
+        width: 100%;
 
         &.active {
             background: $colorHover;
@@ -41,8 +41,8 @@
 .heart {
     &::after {
         content: '♡';
+        left: 136px;
         position: absolute;
         top: 8px;
-        left: 136px;
     }
 }

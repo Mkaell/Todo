@@ -31,7 +31,6 @@ class PostsComponent extends Component{
     // function for deleting a post from firebase
     async function deletedPost() {
         if(event.target.classList.contains('posts__delete')){
-            console.log(event.target);
             const postId = event.target.dataset.delete;
             await apiService.deletePostById(postId);
             document.location.reload();

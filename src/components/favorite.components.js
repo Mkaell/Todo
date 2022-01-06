@@ -40,7 +40,7 @@ async function linkClickHandler(event){
 }
 
 function renderList(list = {}){
-    console.log(list);
+
     if(!isEmpty(list)){
         return `
         <ul>
