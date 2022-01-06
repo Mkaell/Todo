@@ -62,6 +62,11 @@ Launching
 npm start
 ```
 
-
+<div align="center">
+  <img src="./src/img/screens/first.png" align="center" width='49%'>
+  <img src="./src/img/screens/second.png"align="center" width='49%'>
+  <img src="./src/img/screens/third.png"align="center" width='49%'>
+</div>
+<img src="./src/img/screens/fourth.png"align="left" width='49%'>
 
 
