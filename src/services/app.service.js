@@ -66,5 +66,5 @@ async function useRequest(request){
 }
 
 export const apiService = new ApiService(
-    'https://project-todo-700c6-default-rtdb.europe-west1.firebasedatabase.app/'
+    'https://todo-f8573-default-rtdb.europe-west1.firebasedatabase.app/'
 );
